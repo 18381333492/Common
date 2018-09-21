@@ -7679,7 +7679,7 @@ button.mfp-close:hover {
   top:88px;
   background-color: white;
   padding: 6px;
-  width: 300px;
+  width: 240px;
 }
 #cssmenu li:hover > ul {
   left: auto;
@@ -7714,13 +7714,28 @@ button.mfp-close:hover {
 }
 #cssmenu ul ul li a{
   padding: 10px;
+    border-radius:5px;
 }
-#cssmenu ul ul li a ,#cssmenu ul ul li> a>p{
+#cssmenu ul ul li a{
   width: 95%;
   display: inline-block;
-  font-size: 14px;
+  font-size:15px;
   text-decoration: none;
-  color: #333;
+  color:#333;
+  -webkit-transition: color .2s ease;
+  -moz-transition: color .2s ease;
+  -ms-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+
+#cssmenu ul ul li> a>p{
+  width: 95%;
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+  color: #999;
   -webkit-transition: color .2s ease;
   -moz-transition: color .2s ease;
   -ms-transition: color .2s ease;
@@ -7735,10 +7750,16 @@ button.mfp-close:hover {
 #cssmenu ul ul li a.status p {
   color: white;
 }
-#cssmenu ul ul li:hover > a,
-#cssmenu ul ul li:hover > a>p,
+#cssmenu ul ul li:hover > a
+{
+  /*color: white;*/
+  background: #82c51e;
+}
+#cssmenu ul ul li:hover > a>p{
+      background: #82c51e;
+      color:white;
+}
 #cssmenu ul ul li a:hover {
-  color: white;
   background: #82c51e;
 }
 #cssmenu ul ul li.has-sub > a::after {

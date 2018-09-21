@@ -438,7 +438,7 @@ $(document).ready(function($) {
         $('#btncssmenu').show();
     });
 
-    $('.login_btn,#btncssmenu').mouseleave(function () {
-        $('#btncssmenu').hide();
-    });
+    //$('.login_btn,#btncssmenu').mouseleave(function () {
+    //    $('#btncssmenu').hide();
+    //});
 });
