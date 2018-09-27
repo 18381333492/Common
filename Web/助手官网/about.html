@@ -178,8 +178,8 @@
                 <p>我们帮助每一位重视产品和服务的商家私有化顾客资产、提高经营效率，全面助力商家成功，并致力于成为移动社交电
                     商服务领域里最被信任的创新者。
                 </p>
-                <div style="text-align: center;margin: 70px 0">
-                    <img src="assets/img/bottom.png" height="335" width="736" />
+                <div style="text-align: center;margin: 70px 0;height:500px;width:1066px;" id="container">
+                    <!--<img src="assets/img/bottom.png" height="335" width="736" />-->
                 </div>
             </div>
         </div>
@@ -274,5 +274,23 @@
 <script src="assets/js/imagesloaded.min.js"></script>
 <script src="assets/js/pace.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=hYAhbSQzwUUDUdVhtWgFBR3TM4ffKzaG"></script>
 </body>
 </html>
+<script type="text/javascript">
+    var map = new BMap.Map("container");          // 创建地图实例  
+    var point = new BMap.Point(104.073, 30.541);  // 创建点坐标  
+    map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别  
+  //  map.enableScrollWheelZoom(true);
+    map.addControl(new BMap.NavigationControl());
+    var marker = new BMap.Marker(point);        // 创建标注    
+   
+
+    var label = new BMap.Label("美年广场二期", {
+        offset: new BMap.Size(-75,-15)
+    });
+    label.setStyle({width: "120px",color: 'black',background: 'none',border: '1px solid "#ff8355"',borderRadius: "5px",textAlign: "center",height: "26px",lineHeight: "26px"});
+ 
+    marker.setLabel(label); //为标注添加一个标签
+    map.addOverlay(marker);
+</script>
